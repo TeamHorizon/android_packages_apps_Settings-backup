@@ -71,6 +71,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_SCREEN_SAVER = "screensaver";
     private static final String KEY_WIFI_DISPLAY = "wifi_display";
 	private static final String KEY_LOCK_CLOCK = "lock_clock";
+	private static final String KEY_HALO_ENABLED = "halo_enabled";
 	private static final String KEY_HALO_STATE = "halo_state";
     private static final String KEY_HALO_HIDE = "halo_hide";
     private static final String KEY_HALO_REVERSED = "halo_reversed";
@@ -82,6 +83,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mAccelerometer;
     private WarnedListPreference mFontSizePref;
     private CheckBoxPreference mNotificationPulse;
+    private CheckBoxPreference mHaloEnabled;
     private ListPreference mHaloState;
     private CheckBoxPreference mHaloHide;
     private CheckBoxPreference mHaloReversed;
@@ -157,6 +159,9 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         
         mNotificationManager = INotificationManager.Stub.asInterface(
                 ServiceManager.getService(Context.NOTIFICATION_SERVICE));
+
+	mHaloEnabled = (CheckBoxPreference) prefSet.findPreference(KEY_HALO_ENABLED);
+	mHaloEnabled.setChecked(Settings.System.getInt(getActivity().getContentResolver(), Settings.System.HALO_ENABLED, 0) == 1);
 
         mHaloState = (ListPreference) prefSet.findPreference(KEY_HALO_STATE);
         mHaloState.setValue(String.valueOf((isHaloPolicyBlack() ? "1" : "0")));
@@ -384,6 +389,9 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             boolean value = mNotificationPulse.isChecked();
             Settings.System.putInt(getContentResolver(), Settings.System.NOTIFICATION_LIGHT_PULSE,
                     value ? 1 : 0);
+	} else if (preference == mHaloEnabled) {
+		Settings.System.putInt(getActivity().getContentResolver(),
+			Settings.System.HALO_ENABLED, mHaloEnabled.isChecked() ? 1:0);
         } else if (preference == mHaloHide) {
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.HALO_HIDE,

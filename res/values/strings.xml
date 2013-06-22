@@ -4448,6 +4448,17 @@
 
 	<string name="xenonhd_extras_title">Extras</string>
 
+    <!-- HALO -->
+    <string name="halo_hide_title">Hide HALO after activity</string>
+    <string name="halo_hide_summary">HALO will appear for incoming tasks and scroll out of sight after a while</string>
+    <string name="halo_reversed_title">Reverse HALO gestures</string>
+    <string name="halo_reversed_summary">Applies tasking or dragging to the double-tap-swipe gesture</string>
+    <string name="halo_state_title">HALO policy</string>
+    <string name="halo_state_summary">For black/white-listing notifications pinging through HALO</string>
+    <string name="halo_state_black">Black list</string>
+    <string name="halo_state_white">White list</string>
+
+
 	<string name="quick_links_title">Quick Links</string>
 
 	<!-- Volume rocker controls -->
@@ -4696,6 +4707,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     
     <!-- HALO -->
     <string name="halo_options_title">HALO</string>
+    <string name="halo_enabled_title">Enable HALO</string>
+    <string name="halo_enabled_summary">If checked enable HALO feature</string>
     <string name="halo_hide_title">Hide HALO after activity</string>
     <string name="halo_hide_summary">HALO will appear for incoming tasks and scroll out of sight after a while</string>
     <string name="halo_reversed_title">Reverse HALO gestures</string>
