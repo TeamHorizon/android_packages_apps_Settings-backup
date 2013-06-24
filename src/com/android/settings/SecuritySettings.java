@@ -111,15 +111,6 @@ public class SecuritySettings extends SettingsPreferenceFragment
 
     private boolean mIsPrimary;
 
-    // Cyanogenmod Additions
-    private CheckBoxPreference mSlideLockDelayToggle;
-    private ListPreference mSlideLockTimeoutDelay;
-    private ListPreference mSlideLockScreenOffDelay;
-    private CheckBoxPreference mVibratePref;
-    private CheckBoxPreference mMenuUnlock;
-    private CheckBoxPreference mHomeUnlock;
-    private CheckBoxPreference mQuickUnlockScreen;
-    private ListPreference mSmsSecurityCheck;
     private CheckBoxPreference mPrivacyGuardDefault;
 
     @Override
