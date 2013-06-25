@@ -38,6 +38,7 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
+import android.provider.Settings.SettingNotFoundException;
 import android.security.KeyStore;
 import android.telephony.TelephonyManager;
 import android.util.Log;
@@ -83,13 +84,14 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private static final String PACKAGE_MIME_TYPE = "application/vnd.android.package-archive";
     private static final String KEY_SMS_SECURITY_CHECK_PREF = "sms_security_check_limit";
     private static final String KEY_QUICK_UNLOCK = "lockscreen_quick_unlock_control";
+    private static final String KEY_PRIVACY_GUARD_DEFAULT = "privacy_guard_default";
+    private static final String KEY_APP_SECURITY_CATEGORY = "app_security";
 
     DevicePolicyManager mDPM;
 
     private ChooseLockSettingsHelper mChooseLockSettingsHelper;
     private LockPatternUtils mLockPatternUtils;
     private ListPreference mLockAfter;
-    private ListPreference mSmsSecurityCheck;
 
     private CheckBoxPreference mBiometricWeakLiveliness;
     private CheckBoxPreference mVisiblePattern;
@@ -107,6 +109,17 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private CheckBoxPreference mQuickUnlock;
 
     private boolean mIsPrimary;
+
+    // Cyanogenmod Additions
+    private CheckBoxPreference mSlideLockDelayToggle;
+    private ListPreference mSlideLockTimeoutDelay;
+    private ListPreference mSlideLockScreenOffDelay;
+    private CheckBoxPreference mVibratePref;
+    private CheckBoxPreference mMenuUnlock;
+    private CheckBoxPreference mHomeUnlock;
+    private CheckBoxPreference mQuickUnlockScreen;
+    private ListPreference mSmsSecurityCheck;
+    private CheckBoxPreference mPrivacyGuardDefault;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -290,14 +303,28 @@ public class SecuritySettings extends SettingsPreferenceFragment
             }
         }
 
-        boolean isTelephony = pm.hasSystemFeature(PackageManager.FEATURE_TELEPHONY);
-        if (isTelephony) {
+            // App security settings
             addPreferencesFromResource(R.xml.security_settings_app_cyanogenmod);
             mSmsSecurityCheck = (ListPreference) root.findPreference(KEY_SMS_SECURITY_CHECK_PREF);
-            mSmsSecurityCheck.setOnPreferenceChangeListener(this);
-            int smsSecurityCheck = Integer.valueOf(mSmsSecurityCheck.getValue());
-            updateSmsSecuritySummary(smsSecurityCheck);
-         }
+            if (pm.hasSystemFeature(PackageManager.FEATURE_TELEPHONY)) {
+                mSmsSecurityCheck = (ListPreference) root.findPreference(KEY_SMS_SECURITY_CHECK_PREF);
+                mSmsSecurityCheck.setOnPreferenceChangeListener(this);
+                int smsSecurityCheck = Integer.valueOf(mSmsSecurityCheck.getValue());
+                updateSmsSecuritySummary(smsSecurityCheck);
+            } else {
+                PreferenceGroup appCategory = (PreferenceGroup)
+                        root.findPreference(KEY_APP_SECURITY_CATEGORY);
+                appCategory.removePreference(mSmsSecurityCheck);
+            }
+
+            mPrivacyGuardDefault = (CheckBoxPreference) findPreference(KEY_PRIVACY_GUARD_DEFAULT);
+            try {
+                mPrivacyGuardDefault.setChecked(Settings.Secure.getInt(getContentResolver(),
+                        Settings.Secure.PRIVACY_GUARD_DEFAULT) == 1);
+            } catch (SettingNotFoundException e) {
+                mPrivacyGuardDefault.setChecked(false);
+            }
+         
 
         return root;
     }
@@ -541,6 +568,9 @@ public class SecuritySettings extends SettingsPreferenceFragment
         } else if (KEY_TOGGLE_VERIFY_APPLICATIONS.equals(key)) {
             Settings.Global.putInt(getContentResolver(), Settings.Global.PACKAGE_VERIFIER_ENABLE,
                     mToggleVerifyApps.isChecked() ? 1 : 0);
+        } else if (KEY_PRIVACY_GUARD_DEFAULT.equals(key)) {
+            Settings.Secure.putInt(getContentResolver(), Settings.Secure.PRIVACY_GUARD_DEFAULT,
+                    mPrivacyGuardDefault.isChecked() ? 1 : 0);
         } else {
             // If we didn't handle it, let preferences handle it.
             return super.onPreferenceTreeClick(preferenceScreen, preference);
