@@ -1893,10 +1893,11 @@
     <string name="device_info_settings" product="default">Phone status</string>
 
     <!-- About phone screen, list item title.  Takes the user to the screen for seeing and installing system updates. -->
-    <string name="system_update_settings_list_item_title">System updates</string>
+    <string name="system_update_settings_list_item_title">XenonHD updates</string>
     <!-- About phone screen, list item summary.  Takes the user to the screen for seeing and installing system updates. -->
     <string name="system_update_settings_list_item_summary">""</string>
-
+    <!-- About phone screen, list item title. Screen for viewing ROM stats. -->
+    <string name="rominfo_settings_list_item_title">XenonHD Statistics</string>
     <!--  About device screen, Hardware info -->
     <string name="hardware_info">Hardware info</string>
     <!--  About device Screen, hardware info, rear camera -->
