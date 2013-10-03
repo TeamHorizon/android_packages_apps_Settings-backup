@@ -22,6 +22,9 @@
     <string name="enabled">Enabled</string>
     <string name="default_string">Default</string>
     <string name="choose_app">Choose application</string>
+    <string name="attention">Attention</string>
+
+    <string name="random_stuff">Do whatever you want to do man</string>
 
 	<!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
