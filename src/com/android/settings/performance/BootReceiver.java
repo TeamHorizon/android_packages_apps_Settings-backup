@@ -24,6 +24,9 @@ import android.os.SystemProperties;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
+import com.android.settings.vanir.autosms.MessagingHelper;
+import com.android.settings.DisplaySettings;
+import com.android.settings.R;
 import com.android.settings.Utils;
 
 import java.util.Arrays;
@@ -53,6 +56,8 @@ public class BootReceiver extends BroadcastReceiver {
         } else {
             SystemProperties.set(IOSCHED_SETTINGS_PROP, "false");
         }
+        MessagingHelper.scheduleService(ctx);
+        DisplaySettings.restore(ctx);
     }
 
     private void configureCPU(Context ctx) {
@@ -82,14 +87,14 @@ public class BootReceiver extends BroadcastReceiver {
             if (availableFrequenciesLine != null){
                 frequencies = Arrays.asList(availableFrequenciesLine.split(" "));
             }
-            if (governor != null && governors != null && governors.contains(governor)) {
-                Utils.fileWriteOneLine(Processor.GOV_FILE, governor);
-            }
             if (maxFrequency != null && frequencies != null && frequencies.contains(maxFrequency)) {
                 Utils.fileWriteOneLine(Processor.FREQ_MAX_FILE, maxFrequency);
             }
             if (minFrequency != null && frequencies != null && frequencies.contains(minFrequency)) {
                 Utils.fileWriteOneLine(Processor.FREQ_MIN_FILE, minFrequency);
+            }
+            if (governor != null && governors != null && governors.contains(governor)) {
+                Utils.fileWriteOneLine(Processor.GOV_FILE, governor);
             }
             Log.d(TAG, "CPU settings restored.");
         }
