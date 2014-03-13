@@ -53,6 +53,7 @@ public class PowerMenuActions extends SettingsPreferenceFragment {
     private CheckBoxPreference mSettingsPref;
     private CheckBoxPreference mLockdownPref;
     private CheckBoxPreference mBugReportPref;
+    private CheckBoxPreference mOnTheGoPref;
     private CheckBoxPreference mSilentPref;
 
     Context mContext;
@@ -94,6 +95,8 @@ public class PowerMenuActions extends SettingsPreferenceFragment {
                 mSettingsPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_SETTINGS);
             } else if (action.equals(GLOBAL_ACTION_KEY_LOCKDOWN)) {
                 mLockdownPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_LOCKDOWN);
+            { else if (action.equals(GLOBAL_ACTION_KEY_ONTHEGO)) {
+                mOnTheGoPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_ONTHEGO);
             } else if (action.equals(GLOBAL_ACTION_KEY_BUGREPORT)) {
                 mBugReportPref = (CheckBoxPreference) findPreference(GLOBAL_ACTION_KEY_BUGREPORT);
             } else if (action.equals(GLOBAL_ACTION_KEY_SILENT)) {
