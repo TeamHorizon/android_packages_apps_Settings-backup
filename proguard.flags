@@ -19,7 +19,6 @@
 -keep class com.android.settings.cyanogenmod.MoreDeviceSettings
 -keep class com.android.settings.privacyguard.*
 -keep class com.android.settings.slim.**
--keep class com.android.settings.vanir.**
 -keep class com.android.settings.xenonhd.*Settings
 -keep class com.android.settings.voicewakeup.*
 

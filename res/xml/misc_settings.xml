@@ -97,11 +97,6 @@
         android:title="@string/navbar_title" >
 
         <PreferenceScreen
-            android:key="navigation_bar"
-            android:fragment="com.android.settings.vanir.navbar.NavbarTabHostFragment"
-            android:title="@string/category_navbar" />
-
-        <PreferenceScreen
             android:key="navigation_bar_dimen"
             android:fragment="com.android.settings.xenonhd.NavBarDimen"
             android:title="@string/navbar_dimen_title" />
