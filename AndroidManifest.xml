@@ -1443,6 +1443,8 @@
         <activity android:name="ConfirmLockPattern"
             android:theme="@style/Theme.ConfirmDeviceCredentials"/>
 
+	<activity android:name="ConfirmLockGesture"/>
+
         <activity android:name="ConfirmLockPassword"
             android:windowSoftInputMode="stateHidden|adjustResize"
             android:theme="@style/Theme.ConfirmDeviceCredentials"/>
@@ -1513,6 +1515,8 @@
         <activity android:name="ChooseLockPatternSize" android:exported="false"/>
 
         <activity android:name="ChooseLockPattern" android:exported="false"/>
+
+	<activity android:name="ChooseLockGesture" android:exported="false"/>
 
         <activity android:name="SetupChooseLockPassword"
             android:exported="false"
