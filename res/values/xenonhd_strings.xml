@@ -210,4 +210,8 @@
     <string name="xenonota_title">XenonHD Updates</string>
     <string name="xenonota_summary">Check for ROM updates</string>
 
+    <!-- Changelog -->
+    <string name="changelog_crdroid_title">Changelog</string>
+    <string name="changelog_crdroid_error">Unable to load changelog</string>
+
 </resources>
