@@ -1907,6 +1907,9 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         } else if (preference == mKeepScreenOn) {
             writeStayAwakeOptions(newValue);
             return true;
+        } else if (preference == mKeepScreenOn) {
+            writeStayAwakeOptions(newValue);
+            return true;
         }
         return false;
     }
