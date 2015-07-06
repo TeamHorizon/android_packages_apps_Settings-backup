@@ -85,33 +85,18 @@
                 android:icon="@drawable/ic_settings_misc"
                 />
 
-<<<<<<< HEAD
-	</dashboard-category>
-=======
-        <!-- Gestures -->
+        <!-- Kernel Adiutor -->
         <dashboard-tile
-            android:id="@+id/device_specific_gesture_settings"
-            android:title="@string/gesture_settings_title"
-            android:icon="@drawable/ic_settings_gestures">
+                android:id="@+id/kernel_adiutor"
+                android:title="@string/kernel_adiutor"
+                android:icon="@drawable/ic_settings_kernel">
             <intent
-                android:action="com.cyanogenmod.action.LAUNCH_TOUCHSCREEN_GESTURE_SETTINGS"
-                android:targetPackage="com.cyanogenmod.settings.device"
-                android:targetClass="com.cyanogenmod.settings.device.TouchscreenGestureSettings" />
-        </dashboard-tile>
-
-        <!-- BitSyko Layers App -->
-        <dashboard-tile
-                android:id="@+id/bitsyko_layers"
-                android:icon="@drawable/ic_bitsyko_layers"
-                android:title="@string/bitsyko_layers">
-                <intent
-                    android:action="android.intent.action.MAIN"
-                    android:targetPackage="com.lovejoy777.rroandlayersmanager"
-                    android:targetClass="com.lovejoy777.rroandlayersmanager.menu" />
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.grarak.kerneladiutor"
+                android:targetClass="com.grarak.kerneladiutor.MainActivity" />
         </dashboard-tile>
 
     </dashboard-category>
->>>>>>> c7b8795... Add hook in Settings for Layers Manager
 
     <!-- DEVICE -->
     <dashboard-category
@@ -281,6 +266,28 @@
                 android:icon="@drawable/ic_settings_print"
                 />
 
+<<<<<<< HEAD
+=======
+        <!-- Performance -->
+        <dashboard-tile
+                android:id="@+id/performance_settings"
+                android:title="@string/performance_settings_title"
+                android:fragment="com.android.settings.cyanogenmod.PerformanceSettings"
+                android:icon="@drawable/ic_settings_performance"
+                />
+
+        <!-- Kernel Adiutor -->
+        <dashboard-tile
+                android:id="@+id/kernel_adiutor"
+                android:title="@string/kernel_adiutor"
+                android:icon="@drawable/ic_settings_kernel">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.grarak.kerneladiutor"
+                android:targetClass="com.grarak.kerneladiutor.MainActivity" />
+        </dashboard-tile>
+
+>>>>>>> df82ce2... Add kernel adiutor to settings
         <!-- Development -->
         <dashboard-tile
                 android:id="@+id/development_settings"

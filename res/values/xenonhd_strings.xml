@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!-- Copyright (C) 2012-2015 Team Horizon
-     
+
 	 Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -77,7 +77,6 @@
     <string name="double_tap_sleep_nav_bar_title">Double-tap to sleep</string>
     <string name="double_tap_sleep_nav_bar_summary">Double tap navigation bar to put the device to sleep</string>
 
-<<<<<<< HEAD
 	<!-- Power menu -->
 	<string name="power_menu_title">Power menu</string>
     <string name="power_menu_reboot_title">Reboot menu</string>
@@ -97,7 +96,7 @@
 	<!-- Force expand notifications -->
     <string name="notification_force_expand_title">Force expanded notification</string>
     <string name="notification_force_expand_summary">Force expanded notifications on all apps that support it</string>
-=======
+
     <!-- Show carrier label and custom -->
     <string name="carrier_options">Carrier Label</string>
     <string name="show_status_bar_carrier_title">Status bar carrier</string>
@@ -319,7 +318,6 @@
 
     <!-- Kernel Adiutor -->
     <string name="kernel_adiutor">Kernel</string>
->>>>>>> c7b8795... Add hook in Settings for Layers Manager
 
 	<!-- tap-to-sleep -->
     <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
