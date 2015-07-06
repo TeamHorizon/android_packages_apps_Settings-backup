@@ -314,6 +314,7 @@
 
     <string name="mem_info">RAM</string>
 
+<<<<<<< HEAD
     <!-- BitSyko Layers -->
     <string name="bitsyko_layers">Layers Manager</string>
 
@@ -362,4 +363,8 @@
     <string name="daniel">Daniel Sikorski</string>
     <string name="daniel_gplus">+DanielSikorskidadi11</string>
 
+=======
+    <!-- Kernel Adiutor -->
+    <string name="kernel_adiutor">Kernel</string>
+>>>>>>> df82ce2... Add kernel adiutor to settings
 </resources>
