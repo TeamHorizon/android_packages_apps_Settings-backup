@@ -36,6 +36,13 @@
                     android:targetClass="@string/additional_system_update_menu" />
         </PreferenceScreen>
 
+        <!-- About XenonHD -->
+        <PreferenceScreen
+                android:key="about"
+                android:fragment="com.android.settings.About"
+                android:title="@string/about_xenonhd"
+                android:summary="@string/about_xenonhd_summary" />
+
         <!-- Changelog -->
         <PreferenceScreen android:key="changelog"
                 android:title="@string/changelog_crdroid_title"
