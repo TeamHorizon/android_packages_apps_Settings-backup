@@ -537,4 +537,33 @@
    <string name="status_bar_custom_header_title">Custom header image</string>
    <string name="status_bar_custom_header_summary">Enable notification panel header image</string>
 
+    <!-- About -->
+    <string name="about_xenonhd">About XenonHD</string>
+    <string name="about_xenonhd_summary">Faces behind this ROM</string>
+    <string name="title_about">About XenonHD</string>
+    <string name="devs">Team</string>
+    <string name="xenonhd">Team Horizon</string>
+    <string name="xenonhd_website_title">Website</string>
+    <string name="xenonhd_website_summary">@null</string>
+    <string name="xenonhd_source_title">Source</string>
+    <string name="xenonhd_source_summary">You can always check out the latest source at github.com/teamhorizon</string>
+    <string name="about_xehd">About XenonHD</string>
+    <string name="about_xehd_summary">@null</string>
+    <string name="donate">https://play.google.com/store/apps/details?id=com.th.xenonhdsupport</string>
+    <string name="donate_andy">http://forum.xda-developers.com/donatetome.php?u=4583359</string>
+    <string name="arham">Arham Jamal</string>
+    <string name="arham_twitter">arhamjamal</string>
+    <string name="adam">Adam Holloway</string>
+    <string name="adam_twitter">adam80460</string>
+    <string name="peter">Peter Carenza</string>
+    <string name="peter_twitter">pcarenza</string>
+    <string name="jose">Jose Toro</string>
+    <string name="jose_twitter">TheBr0ken</string>
+    <string name="tony">Tony Roach</string>
+    <string name="tony_twitter">tmacgnolia</string>
+    <string name="leo">Leo Jehl</string>
+    <string name="leo_twitter">yalehaus3</string>
+    <string name="tory">Tory Heal</string>
+    <string name="tory_twitter">thamaxx</string>
+
 </resources>
