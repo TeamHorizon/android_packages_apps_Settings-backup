@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+        android:title="@string/about_settings">
+
+	<PreferenceCategory
+		android:key="about_xenon"
+		android:title="@string/xenonhd">
+
+		<com.android.settings.TeamHorizon
+			android:key="xenonhd_picture" />
+
+		<Preference
+			android:key="xenonhd_website"
+			android:title="@string/xenonhd_website_title"
+			android:summary="@string/xenonhd_website_summary" />
+
+		<Preference
+			android:key="xenonhd_source"
+			android:title="@string/xenonhd_source_title"
+			android:summary="@string/xenonhd_source_summary" />
+
+
+	</PreferenceCategory>
+
+	<PreferenceCategory
+		android:key="devs"
+		android:title="@string/devs">
+
+		<com.android.settings.DeveloperPreference
+			android:title="arhamjamal"
+			android:persistent="true"
+			android:order="1"
+			settings:nameDev="Arham Jamal"
+			settings:twitterName="arhamjamal"/>
+			
+		<com.android.settings.DeveloperPreference
+			android:title="adam80460"
+			android:persistent="true"
+			android:order="2"
+			settings:nameDev="Adam Holloway"
+			settings:twitterName="adam80460" />
+
+		<com.android.settings.DeveloperPreference
+			android:title="frap129"
+			android:persistent="true"
+			android:order="3"
+			settings:nameDev="Joe Maples"
+			settings:twitterName="frap129" />
+			
+		<com.android.settings.DeveloperPreference
+			android:title="pcarenza"
+			android:persistent="true"
+			android:order="4"
+			settings:nameDev="Peter Carenza"
+			settings:twitterName="pcarenza" />
+		
+		<com.android.settings.DeveloperPreference
+			android:title="thebroken"
+			android:persistent="true"
+			android:order="5"
+			settings:nameDev="Jose Toro"
+			settings:twitterName="thebroken" />
+			
+		<com.android.settings.DeveloperPreference
+			android:title="tmacgnolia"
+			android:persistent="true"
+			android:order="6"
+			settings:nameDev="Tony Roach"
+			settings:twitterName="tmacgnolia" />
+
+		<com.android.settings.DeveloperPreference
+			android:title="ljjehl"
+			android:persistent="true"
+			android:order="7"
+			settings:nameDev="Leo Jehl"
+			settings:twitterName="ljjehl" />
+		
+		<com.android.settings.DeveloperPreference
+			android:title="thamaxx"
+			android:persistent="true"
+			android:order="8"
+			settings:nameDev="Tory Heal"
+			settings:twitterName="thamaxx" />
+			
+	</PreferenceCategory>
+
+</PreferenceScreen>
