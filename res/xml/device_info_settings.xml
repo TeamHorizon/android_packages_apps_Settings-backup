@@ -21,6 +21,13 @@
                           android:enabled="false"
                           android:layout="@layout/xenonhd_logo_row" />		
 
+        <!-- About XenonHD -->
+        <PreferenceScreen
+                android:key="about"
+                android:fragment="com.android.settings.About"
+                android:title="@string/about_xenonhd"
+                android:summary="@string/about_xenonhd_summary" />
+
         <!-- Device status - launches activity -->
         <PreferenceScreen android:key="status_info"
                 android:title="@string/device_status"
