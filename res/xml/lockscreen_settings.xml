@@ -18,11 +18,19 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
         android:title="@string/lockscreen_category">
 
-		<PreferenceScreen
-            android:title="@string/lockscreen_targets_message" >
-            <intent
-                android:targetPackage="com.android.systemui"
-                android:targetClass="com.android.systemui.cm.LockscreenShortcutsActivity" />
-        </PreferenceScreen>
+    <PreferenceScreen
+        android:title="@string/lockscreen_targets_message" >
+        <intent
+        android:targetPackage="com.android.systemui"
+        android:targetClass="com.android.systemui.cm.LockscreenShortcutsActivity" />
+    </PreferenceScreen>
+
+    <PreferenceScreen 
+        android:key="lockscreen_wallpaper"
+        android:title="@string/lockscreen_wallpaper_title"
+        android:summary="@string/lockscreen_wallpaper_summary"
+        android:persistent="false"
+        android:fragment="com.android.settings.temasek.LockscreenWallpaper">
+    </PreferenceScreen>
 
 </PreferenceScreen>
