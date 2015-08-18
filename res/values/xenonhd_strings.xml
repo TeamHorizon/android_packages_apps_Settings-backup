@@ -537,4 +537,8 @@
    <string name="status_bar_custom_header_title">Custom header image</string>
    <string name="status_bar_custom_header_summary">Enable notification panel header image</string>
 
+    <string name="shake_clear_notification">Shake to clear</string>
+    <string name="shake_clear_notification_summary">Clear notification by shaking your device</string>
+
+
 </resources>

@@ -77,6 +77,14 @@
                 settings:keywords="@string/keywords_sounds_and_notifications_interruptions"
                 android:fragment="com.android.settings.notification.ZenModeSettings" />
 
+        <!-- Shake to clear notifications -->
+        <SwitchPreference
+            android:key="shake_clean_notification"
+            android:title="@string/shake_clear_notification"
+            android:summary="@string/shake_clear_notification_summary"
+            android:defaultValue="false" />
+
+
         <!-- Phone ringtone -->
         <com.android.settings.DefaultRingtonePreference
                 android:key="ringtone"
