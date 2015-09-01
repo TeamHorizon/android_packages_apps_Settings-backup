@@ -36,6 +36,28 @@
                     android:targetClass="@string/additional_system_update_menu" />
         </PreferenceScreen>
 
+        <!-- XenonOTA -->
+        <PreferenceScreen android:key="xenonota"
+                android:title="@string/xenonota_title"
+                android:summary="@string/xenonota_summary">
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.fusionjack.slimota"
+                    android:targetClass="com.fusionjack.slimota.MainActivity" />
+        </PreferenceScreen>
+
+		<!-- Anonymous statistics -->
+        <PreferenceScreen
+            android:key="cmstats"
+            android:title="@string/anonymous_statistics_title"
+            android:summary="@string/anonymous_statistics_summary"
+            android:fragment="com.android.settings.cmstats.AnonymousStats" >
+        </PreferenceScreen>
+
+        <!-- Changelog -->
+        <PreferenceScreen android:key="changelog"
+                android:title="@string/changelog_crdroid_title"
+                android:fragment="com.android.settings.crdroid.Changelog" />
+
         <!-- Device status - launches activity -->
         <PreferenceScreen android:key="status_info"
                 android:title="@string/device_status"
