@@ -268,4 +268,9 @@
 	<!-- Long press to skip tracks -->
 	<string name="volbtn_music_controls_title">Playback control</string>
 	<string name="volbtn_music_controls_summary">When the screen is off, long pressing the volume keys will seek music tracks</string>
+
+    <!-- XenonOTA -->
+    <string name="xenonota_title">XenonHD Updates</string>
+    <string name="xenonota_summary">Check for ROM updates</string>
+
 </resources>
