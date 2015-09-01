@@ -100,4 +100,9 @@
 	<!-- tap-to-sleep -->
     <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
     <string name="double_tap_to_sleep_summary">Double-tap on the status bar to turn off the display</string>
+
+    <!-- XenonOTA -->
+    <string name="xenonota_title">XenonHD Updates</string>
+    <string name="xenonota_summary">Check for ROM updates</string>
+
 </resources>
