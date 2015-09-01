@@ -199,4 +199,9 @@
     <string name="quick_pulldown_off">Off</string>
     <string name="quick_pulldown_left">Left</string>
     <string name="quick_pulldown_right">Right</string>
+
+    <!-- XenonOTA -->
+    <string name="xenonota_title">XenonHD Updates</string>
+    <string name="xenonota_summary">Check for ROM updates</string>
+
 </resources>
