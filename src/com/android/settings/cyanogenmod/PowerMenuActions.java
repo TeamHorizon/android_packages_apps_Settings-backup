@@ -22,6 +22,7 @@ import android.content.pm.UserInfo;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.os.UserManager;
+import android.preference.SwitchPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
@@ -41,6 +42,8 @@ public class PowerMenuActions extends PreferenceFragment {
 
     private SwitchPreference mRebootPref;
     private SwitchPreference mScreenshotPref;
+    private SwitchPreference mScreenrecordPref;
+    private SwitchPreference mProfilePref;
     private SwitchPreference mAirplanePref;
     private SwitchPreference mUsersPref;
     private SwitchPreference mSettingsPref;
@@ -77,6 +80,10 @@ public class PowerMenuActions extends PreferenceFragment {
                 mRebootPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_REBOOT);
             } else if (action.equals(GLOBAL_ACTION_KEY_SCREENSHOT)) {
                 mScreenshotPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_SCREENSHOT);
+            } else if (action.equals(GLOBAL_ACTION_KEY_SCREENRECORD)) {
+                mScreenrecordPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_SCREENRECORD);
+            } else if (action.equals(GLOBAL_ACTION_KEY_PROFILE)) {
+                mProfilePref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_PROFILE);
             } else if (action.equals(GLOBAL_ACTION_KEY_AIRPLANE)) {
                 mAirplanePref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_AIRPLANE);
             } else if (action.equals(GLOBAL_ACTION_KEY_USERS)) {
