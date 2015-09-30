@@ -18,6 +18,11 @@ package com.android.settings.crdroid;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.graphics.Color;
+import android.text.Spannable;
+import android.text.SpannableStringBuilder;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.StyleSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +34,8 @@ import com.android.settings.R;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 
 public class Changelog extends Fragment {
 
@@ -39,14 +46,17 @@ public class Changelog extends Fragment {
                 Bundle savedInstanceState) {
         InputStreamReader inputReader = null;
         String text = null;
-
-        try {
-            StringBuilder data = new StringBuilder();
+        StringBuilder data = new StringBuilder();
+        ForegroundColorSpan fcs = new ForegroundColorSpan(Color.rgb(158,158,20));
+        StyleSpan bss = new StyleSpan(android.graphics.Typeface.BOLD);
+        Pattern p = Pattern.compile("([[{7})i\\s(.*)\\(.*)\\\\s\\[(.*)\\]");
+        try {    
             char tmp[] = new char[2048];
             int numRead;
 
             inputReader = new FileReader(CHANGELOG_PATH);
             while ((numRead = inputReader.read(tmp)) >= 0) {
+                
                 data.append(tmp, 0, numRead);
             }
             text = data.toString();
@@ -61,8 +71,14 @@ public class Changelog extends Fragment {
             }
         }
 
+        SpannableStringBuilder sb = new SpannableStringBuilder(text);
+        Matcher m = p.matcher(text);
+        while (m.find()){
+          sb.setSpan(fcs,m.start(1), m.end(1), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+        }
+
         final TextView textView = new TextView(getActivity());
-        textView.setText(text);
+        textView.setText(sb);
 
         final ScrollView scrollView = new ScrollView(getActivity());
         scrollView.addView(textView);
