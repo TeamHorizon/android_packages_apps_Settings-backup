@@ -428,13 +428,11 @@
   <string name="devs">Zespół</string>
   <string name="xenonhd">ROM</string>
   <string name="xenonhd_website_title">Strona internetowa</string>
-  <string name="xenonhd_website_summary">\@null</string>
   <string name="xenonhd_source_title">Źródła</string>
   <string name="xenonhd_source_summary">Najnowsze źródła znajdziesz zawsze na github.com/teamhorizon</string>
   <string name="xenonhd_gerrit_title">Przegląd kodu Gerrit</string>
   <string name="xenonhd_gerrit_summary">Wnieś swój wkład i współpracuj!</string>
   <string name="about_xehd">O XenonHD</string>
-  <string name="about_xehd_summary">\@null</string>
   <string name="donate">https://play.google.com/store/apps/details?id=com.th.xenonhdsupport</string>
   <string name="arham">Arham Jamal</string>
   <string name="arham_gplus">+ArhamIceAndFireJamal</string>
