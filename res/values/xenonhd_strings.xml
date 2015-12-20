@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!-- Copyright (C) 2012-2015 Team Horizon
-     
+
 	 Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -33,16 +33,22 @@
     <string name="set">Set</string>
     <string name="color_default">Default</string>
 
-    <!-- SuperSU header name - the app hides itself from launcher based on this resource name being present in com.android.settings -->
-    <string name="supersu_title">SuperSU</string>
-
-	<string name="header_category_personalization">Personalization</string>
+    <string name="header_category_personalization">Personalization</string>
 
 	<!-- XenonHD settings -->
     <string name="misc_settings_title">ROM Settings</string>
 
+	<!-- BitSyko Layers -->
+    <string name="bitsyko_layers">Layers Manager</string>
+
+	<!-- Kernel Adiutor -->
+    <string name="kernel_adiutor">Kernel</string>
+
+	<!-- SuperSU header name - the app hides itself from launcher based on this resource name being present in com.android.settings -->
+    <string name="supersu_title">SuperSU</string>
+
 	<!-- Status bar | Network Traffic -->
-	<string name="network_traffic_title">Network traffic</string>
+    <string name="network_traffic_title">Network traffic</string>
     <string name="show_network_traffic_state">Status bar traffic monitor</string>
     <string name="show_network_traffic_unit">Display unit</string>
     <string name="show_network_traffic_frequency">Update interval</string>
@@ -64,22 +70,22 @@
     <string name="network_traffic_color_reset_message">Reset network traffic color to default?</string>
 
 	<!-- Status bar | Brightness control -->
-	<string name="status_bar_toggle_brightness">Brightness control</string>
+    <string name="status_bar_toggle_brightness">Brightness control</string>
     <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across the status bar</string>
 
 	<!-- Hardware keys -->
-	<string name="button_pref_title">Buttons</string>
-	<string name="hardware_keys_power_key_title">Power button</string>
-	<string name="hardware_keys_volume_key_title">Volume button</string>
+    <string name="button_pref_title">Buttons</string>
+    <string name="hardware_keys_power_key_title">Power button</string>
+    <string name="hardware_keys_volume_key_title">Volume button</string>
 
-	<string name="navigation_bar_category">Navigation bar</string>
+    <string name="navigation_bar_category">Navigation bar</string>
 
 	<!-- Double Tap Navbar to Sleep -->
     <string name="double_tap_sleep_nav_bar_title">Double-tap to sleep</string>
     <string name="double_tap_sleep_nav_bar_summary">Double tap navigation bar to put the device to sleep</string>
 
 	<!-- Power menu -->
-	<string name="power_menu_title">Power menu</string>
+    <string name="power_menu_title">Power menu</string>
     <string name="power_menu_reboot_title">Reboot menu</string>
     <string name="power_menu_screenshot_title">Screenshot</string>
     <string name="power_menu_airplane_title">Airplane mode</string>
@@ -103,7 +109,7 @@
     <string name="double_tap_to_sleep_summary">Double-tap on the status bar to turn off the display</string>
 
 	<!-- Clock and date -->
-    <string name="clock_styles_title">Clock and date</string>  
+    <string name="clock_styles_title">Clock and date</string>
     <string name="clock_styles_summary">Customize clock styles and date format</string>
     <string name="clock_title_enable">Alignment</string>
     <string name="clock_enabled">Enabled</string>
@@ -117,7 +123,7 @@
     <string name="enable_clock_weekday_summary">Abbreviated day of the week before the time</string>
     <string name="right_clock">Right clock</string>
     <string name="center_clock">Center clock</string>
-	<string name="left_clock">Left clock</string>
+    <string name="left_clock">Left clock</string>
     <string name="dont_show">Don\'t show</string>
     <string name="clock_date_display">Date</string>
     <string name="clock_date_display_summary">Display custom date before the clock</string>
@@ -174,7 +180,7 @@
     <string name="kill_app_longpress_back_summary">Kill the foreground app by long-pressing the back button</string>
 
 	<!-- Status bar - Battery -->
-	<string name="battery_title">Battery</string>
+    <string name="battery_title">Battery</string>
     <string name="battery2_summary">Customize battery icons and percentage</string>
     <string name="status_bar_battery_style_title">Battery status style</string>
     <string name="status_bar_battery_style_icon_portrait">Icon portrait</string>
@@ -192,7 +198,7 @@
     <string name="status_bar_battery_percentage_text_next">Next to the icon</string>
 
 	<!-- Quick pulldown -->
-	<string name="quick_pulldown_title">Quick pulldown</string>
+    <string name="quick_pulldown_title">Quick pulldown</string>
     <string name="quick_pulldown_summary">%1$s edge of the status bar pulls down Quick Settings</string>
     <string name="quick_pulldown_summary_left">Left</string>
     <string name="quick_pulldown_summary_right">Right</string>
@@ -220,10 +226,10 @@
     <string name="lockscreen_category">Lockscreen</string>
 
 	<!-- Lock screen shortcuts -->
-	<string name="lockscreen_targets_message">Shortcuts</string>
+    <string name="lockscreen_targets_message">Shortcuts</string>
 
 	<!-- Interface settings -->
-	<string name="category_interface">Interface</string>
+    <string name="category_interface">Interface</string>
 
 	<!-- Display & Lights screen, setting options for LCD density -->
     <string name="lcd_density">LCD density</string>
@@ -233,6 +239,6 @@
     <string name="restarting_ui">Restarting UI\u2026</string>
 
 	<!-- Audio ducking -->
-	<string name="interruptions_ignore_while_media_title">Prevent audio ducking</string>
+    <string name="interruptions_ignore_while_media_title">Prevent audio ducking</string>
     <string name="interruptions_ignore_while_media_summary">Do not reduce media playback volume when a notification arrives</string>
 </resources>

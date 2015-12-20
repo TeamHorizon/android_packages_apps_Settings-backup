@@ -67,12 +67,6 @@
         android:summary="@string/runningservices_settings_summary"
         android:fragment="com.android.settings.applications.RunningServices" />
 
-    <com.android.settings.ColorModePreference
-        android:key="color_mode"
-        android:title="@string/picture_color_mode"
-        android:summary="@string/picture_color_mode_desc"
-        android:persistent="false" />
-
     <PreferenceCategory android:key="debug_debugging_category"
             android:title="@string/debug_debugging_category">
 
@@ -248,11 +242,6 @@
             android:persistent="false"
             android:entries="@array/overlay_display_devices_entries"
             android:entryValues="@array/overlay_display_devices_values" />
-
-        <SwitchPreference
-            android:key="enable_multi_window"
-            android:title="@string/enable_multi_window"
-            android:summary="@string/enable_multi_window_summary"/>
 
     </PreferenceCategory>
 

@@ -96,6 +96,39 @@
                 android:icon="@drawable/ic_settings_misc"
                 />
 
+        <!-- BitSyko Layers App -->
+        <dashboard-tile
+                android:id="@+id/bitsyko_layers"
+                android:icon="@drawable/ic_bitsyko_layers"
+                android:title="@string/bitsyko_layers">
+                <intent
+                    android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.lovejoy777.rroandlayersmanager"
+                    android:targetClass="com.lovejoy777.rroandlayersmanager.menu" />
+        </dashboard-tile>
+
+              <!-- Kernel Adiutor -->
+        <dashboard-tile
+                android:id="@+id/kernel_adiutor"
+                android:title="@string/kernel_adiutor"
+                android:icon="@drawable/ic_settings_kernel">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.grarak.kerneladiutor"
+                android:targetClass="com.grarak.kerneladiutor.MainActivity" />
+        </dashboard-tile>
+
+        <!-- SuperSU -->
+        <dashboard-tile
+                android:id="@+id/supersu_settings"
+                android:icon="@drawable/ic_settings_supersu"
+                android:title="@string/supersu_title">
+                <intent
+                    android:action="android.intent.action.MAIN"
+                    android:targetPackage="eu.chainfire.supersu"
+                    android:targetClass="eu.chainfire.supersu.MainActivity" />
+        </dashboard-tile>
+
 	</dashboard-category>
 
     <!-- DEVICE -->
@@ -273,17 +306,6 @@
                 android:fragment="com.android.settings.DevelopmentSettings"
                 android:icon="@drawable/ic_settings_development"
                 />
-
-        <!-- SuperSU -->
-        <dashboard-tile
-                android:id="@+id/supersu_settings"
-                android:icon="@drawable/ic_settings_supersu"
-                android:title="@string/supersu_title">
-                <intent
-                    android:action="android.intent.action.MAIN"
-                    android:targetPackage="eu.chainfire.supersu"
-                    android:targetClass="eu.chainfire.supersu.MainActivity" />
-        </dashboard-tile>
 
         <!-- About Device -->
         <dashboard-tile
