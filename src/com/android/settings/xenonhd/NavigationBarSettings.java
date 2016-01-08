@@ -43,6 +43,10 @@ public class NavigationBarSettings extends SettingsPreferenceFragment implements
     private static final String PREF_NAVIGATION_BAR_WIDTH = "navigation_bar_width";
     private static final String NAVIGATION_BAR_SHOW = "navigation_bar_show";
 
+    public static final int KEY_MASK_HOME = 0x01;
+    public static final int KEY_MASK_BACK = 0x02;
+    public static final int KEY_MASK_MENU = 0x04;
+
     ListPreference mNavigationBarHeight;
     ListPreference mNavigationBarHeightLandscape;
     ListPreference mNavigationBarWidth;
@@ -178,9 +182,23 @@ public class NavigationBarSettings extends SettingsPreferenceFragment implements
         final int defaultBrightness = context.getResources().getInteger(
                 com.android.internal.R.integer.config_buttonBrightnessSettingDefault);
 
-        Settings.System.putInt(context.getContentResolver(),
-                Settings.System.NAVIGATION_BAR_SHOW, enabled ? 1 : 0);
-        KeyDisabler.setActive(enabled);
+        final int deviceKeys = context.getResources().getInteger(
+                com.android.internal.R.integer.config_deviceHardwareKeys);
+
+        final boolean hasHomeKey = (deviceKeys & KEY_MASK_HOME) != 0;
+        final boolean hasMenuKey = (deviceKeys & KEY_MASK_MENU) != 0;
+        final boolean hasBackKey = (deviceKeys & KEY_MASK_BACK) != 0;
+
+        final boolean hasHWkeys = (hasHomeKey || hasMenuKey || hasBackKey);
+                
+        if (hasHWkeys) {
+    	    Settings.System.putInt(context.getContentResolver(),
+        	    Settings.System.NAVIGATION_BAR_SHOW, enabled ? 1 : 0);
+    	    KeyDisabler.setActive(enabled);
+        } else {
+    	    Settings.System.putInt(context.getContentResolver(),
+        	    Settings.System.NAVIGATION_BAR_SHOW, 1);
+        }        
 
         if (enabled) {
             Settings.System.putInt(context.getContentResolver(),
