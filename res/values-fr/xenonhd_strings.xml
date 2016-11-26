@@ -20,8 +20,13 @@
   <string name="changelog_xenonhd_title">Note de version</string>
   <string name="changelog_xenonhd_error">Impossible de charger le journal des changements</string>
   <string name="changelog_xenonhd_summary">Vérifier les modifications dans la version actuelle</string>
+  <!-- Density category -->
   <!-- XenonOTA -->
   <string name="xenonota_title">Mises à jour XenonHD</string>
   <string name="xenonota_summary">Rechercher les mises à jour de ROM</string>
   <!-- Dev Options Enabled by Default -->
+  <!-- Phone info shortcut -->
+  <!-- Local (desktop) backup password menu title [CHAR LIMIT=25] -->
+  <!-- Double tap to sleep on lockscreen -->
+  <!-- Notification sound timeout -->
 </resources>
