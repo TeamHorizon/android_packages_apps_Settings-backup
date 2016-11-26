@@ -18,8 +18,13 @@
   <!-- Changelog -->
   <string name="changelog_xenonhd_title">Lista de cambios</string>
   <string name="changelog_xenonhd_error">No es posible mostrar la lista de cambios</string>
+  <!-- Density category -->
   <!-- XenonOTA -->
   <string name="xenonota_title">Actualizaciones XenonHD</string>
   <string name="xenonota_summary">Buscar actualizaciones</string>
   <!-- Dev Options Enabled by Default -->
+  <!-- Phone info shortcut -->
+  <!-- Local (desktop) backup password menu title [CHAR LIMIT=25] -->
+  <!-- Double tap to sleep on lockscreen -->
+  <!-- Notification sound timeout -->
 </resources>
