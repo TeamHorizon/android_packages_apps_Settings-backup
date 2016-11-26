@@ -20,9 +20,14 @@
   <string name="changelog_xenonhd_title">История Изменений</string>
   <string name="changelog_xenonhd_error">Не удаётся загрузить Историю Изменений</string>
   <string name="changelog_xenonhd_summary">Посмотрите изменения в этой сборке</string>
+  <!-- Density category -->
   <!-- XenonOTA -->
   <string name="xenonota_title">Обновления XenonHD</string>
   <string name="xenonota_summary">Проверить обновления прошивки</string>
   <!-- Dev Options Enabled by Default -->
   <string name="show_dev_already_enabled">Не нужно, настройки для разработчиков включены по умолчанию.</string>
+  <!-- Phone info shortcut -->
+  <!-- Local (desktop) backup password menu title [CHAR LIMIT=25] -->
+  <!-- Double tap to sleep on lockscreen -->
+  <!-- Notification sound timeout -->
 </resources>

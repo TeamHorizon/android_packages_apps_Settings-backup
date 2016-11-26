@@ -16,10 +16,14 @@
   <!-- About phone screen, XenonHD version -->
   <string name="xenonhd_version_default">Sconosciuto</string>
   <!-- Changelog -->
-  <string name="changelog_xenonhd_title">Changelog</string>
   <string name="changelog_xenonhd_error">Impossibile caricare il changelog</string>
+  <!-- Density category -->
   <!-- XenonOTA -->
   <string name="xenonota_title">Aggiornamenti XenonHD</string>
   <string name="xenonota_summary">Controlla aggiornamenti ROM</string>
   <!-- Dev Options Enabled by Default -->
+  <!-- Phone info shortcut -->
+  <!-- Local (desktop) backup password menu title [CHAR LIMIT=25] -->
+  <!-- Double tap to sleep on lockscreen -->
+  <!-- Notification sound timeout -->
 </resources>
