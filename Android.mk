@@ -55,7 +55,7 @@ LOCAL_AAPT_FLAGS := --auto-add-overlay \
     --extra-packages android.support.v17.preference \
     --extra-packages android.support.v7.appcompat \
     --extra-packages android.support.v7.recyclerview \
-    --extra-packages com.xenonhd.settings
+    --extra-packages com.xenonhd.hub
 
 ifneq ($(INCREMENTAL_BUILDS),)
     LOCAL_PROGUARD_ENABLED := disabled

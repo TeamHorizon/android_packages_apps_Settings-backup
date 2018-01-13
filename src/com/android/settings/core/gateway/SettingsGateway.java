@@ -132,7 +132,7 @@ import com.android.settings.wifi.WifiInfo;
 import com.android.settings.wifi.WifiSettings;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
 
-import com.xenonhd.settings.XenonSettings;
+import com.xenonhd.hub.XenonSettings;
 
 public class SettingsGateway {
 
